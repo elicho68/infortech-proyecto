@@ -1,0 +1,177 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* 🧭 Menú de navegación */
+.nav {
+  background-color: #00357f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* 📄 Contenido */
+.contenido {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.imagen-principal {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🦶 Pie de página */
+.footer {
+  background-color: #00357f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .contenido {
+    padding: 0 10px;
+  }
+}
+
+/* Submenú */
+.submenu {
+  position: relative;
+}
+
+.submenu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #00357f;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 0 0 6px 6px;
+  z-index: 10;
+}
+
+.submenu .dropdown li {
+  padding: 5px 20px;
+}
+
+.submenu .dropdown li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.submenu .dropdown li a:hover {
+  background-color: #002a63;
+}
+
+.submenu:hover .dropdown {
+  display: block;
+}
+
+/* Responsive ajuste para dropdown */
+@media (max-width: 768px) {
+  .submenu {
+    width: 100%;
+  }
+
+  .submenu .dropdown {
+    position: static;
+    background-color: #00357f;
+  }
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+  margin-left: auto; /* menu a la derecha */
+}
+
+/* Activar hamburguesa en móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #00357f;
+    padding: 10px 0;
+  }
+
+  .nav-links.activo {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .submenu .dropdown {
+    padding-left: 20px;
+  }
+}

@@ -1,0 +1,46 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Archivos temporales de editores
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Sublime Text / VSCode
+*.sublime-workspace
+*.sublime-project
+.vscode/
+
+# Archivos de sistema operativo
+node_modules/
+npm-debug.log*
+
+# Archivos de despliegue o pruebas
+ftp-config.json
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Archivos personales
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Archivos de backup
+*~
+*.old
+*.backup
+
+# Carpeta de producción si se genera automáticamente
+/dist
+/build
+
+# Cache de navegadores
+.cache/
